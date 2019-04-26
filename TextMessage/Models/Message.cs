@@ -14,6 +14,7 @@ namespace TextMessage.Models
         public string DestinationNumber { get; set; }
         [MinLength(1)]
         [MaxLength(140)]
+        [DataType(DataType.MultilineText)]
         [Display(Name = "Message text:")]
         public string Content { get; set; }
     }
