@@ -7,6 +7,7 @@ namespace TextMessage.Models
     {
         [Required(ErrorMessage = "Need a number!")]
         [StringLength(10, MinimumLength = 10, ErrorMessage = "Phone Number must be 10 digits")]
+        [RegularExpression(@"^\d{10}$", ErrorMessage = "Number must be digital!")]
         [DisplayName("To")]
         public string ToMobileNumber { get; set; }
 
